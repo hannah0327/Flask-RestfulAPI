@@ -64,14 +64,14 @@ class BookResource(MethodResource, Resource):
 
 # 不帶有id的書籍資源：用於獲取所有書籍或新增書籍            
 class BookListResource(MethodResource, Resource):
-    @doc(description='Get all books', tags=['Book Management'])
+    @doc(description='Get all books', tags=['Book Request'])
     @marshal_with(BookModelSchema(many=True), code=200)
     def get(self):
         book_list = BookService().get_all_books()
         return book_list, 200
     
     @token_required()
-    @doc(description='Create a new book', tags=['Book Management'])
+    @doc(description='Create a new book', tags=['Book Request'])
     @marshal_with(BookModelSchema, code=201) # 新增成功通常返回 201 Created
     @use_kwargs(BookRequestSchema, location="json")
     @use_kwargs(TokenSchema, location="headers")
