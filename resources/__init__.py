@@ -8,7 +8,7 @@ from flask_restful_swagger import swagger
 
 app = Flask(__name__)
 api = swagger.docs(Api(app), apiVersion='0.1')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqldb://root:elva90327@127.0.0.1/restful_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqldb://root:test@127.0.0.1/restful_db'
 app.config.update({
     'APISPEC_SPEC': APISpec(
         title='Flask Restful API project',
