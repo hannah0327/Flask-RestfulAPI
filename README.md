@@ -87,6 +87,7 @@ python main.py
 ```bash
 token: <your-jwt-token>
 ```
+<img width="854" height="485" alt="image" src="https://github.com/user-attachments/assets/1b1ec59d-4dd5-4a0d-b430-5f3a1a449832" />
 
 ---
 
